@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Crypto Landing Page Design System - Modern Dark Theme with Vibrant Accents */
+
+@layer base {
+  :root {
+    /* Dark navy background with subtle variations */
+    --background: 222 84% 4.5%;
+    --foreground: 210 40% 98%;
+
+    /* Card elements with subtle transparency */
+    --card: 223 71% 8%;
+    --card-foreground: 210 40% 98%;
+
+    /* Popover elements */
+    --popover: 223 71% 8%;
+    --popover-foreground: 210 40% 98%;
+
+    /* Crypto brand colors - vibrant cyan primary */
+    --primary: 191 91% 55%;
+    --primary-foreground: 222 84% 4.9%;
+
+    /* Secondary accent - purple */
+    --secondary: 259 94% 51%;
+    --secondary-foreground: 210 40% 98%;
+
+    /* Muted elements */
+    --muted: 223 71% 12%;
+    --muted-foreground: 215.4 16.3% 65%;
+
+    /* Accent - bright orange for highlights */
+    --accent: 25 95% 53%;
+    --accent-foreground: 222 84% 4.9%;
+
+    /* Success - green for positive trading */
+    --success: 142 71% 45%;
+    --success-foreground: 210 40% 98%;
+
+    /* Destructive - red for negative trading */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+
+    /* Borders and inputs */
+    --border: 223 71% 15%;
+    --input: 223 71% 12%;
+    --ring: 191 91% 55%;
+
+    /* Gradients for visual impact */
+    --gradient-primary: linear-gradient(135deg, hsl(191 91% 55%), hsl(259 94% 51%));
+    --gradient-hero: linear-gradient(135deg, hsl(222 84% 4.5%), hsl(223 71% 8%));
+    --gradient-card: linear-gradient(135deg, hsl(223 71% 8% / 0.8), hsl(223 71% 12% / 0.6));
+    
+    /* Shadows with glow effects */
+    --shadow-glow: 0 0 40px hsl(191 91% 55% / 0.3);
+    --shadow-card: 0 10px 30px -10px hsl(222 84% 4.5% / 0.4);
+    
+    /* Animation easing */
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: all 0.3s var(--ease-smooth);
+
+    --radius: 1rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Keep same variables for dark mode - design is already dark-first */
+    --background: 222 84% 4.5%;
+    --foreground: 210 40% 98%;
+    --card: 223 71% 8%;
+    --card-foreground: 210 40% 98%;
+    --popover: 223 71% 8%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 191 91% 55%;
+    --primary-foreground: 222 84% 4.9%;
+    --secondary: 259 94% 51%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 223 71% 12%;
+    --muted-foreground: 215.4 16.3% 65%;
+    --accent: 25 95% 53%;
+    --accent-foreground: 222 84% 4.9%;
+    --success: 142 71% 45%;
+    --success-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 223 71% 15%;
+    --input: 223 71% 12%;
+    --ring: 191 91% 55%;
+    --sidebar-background: 222 84% 4.5%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 191 91% 55%;
+    --sidebar-primary-foreground: 222 84% 4.9%;
+    --sidebar-accent: 223 71% 12%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 223 71% 15%;
+    --sidebar-ring: 191 91% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    background: var(--gradient-hero);
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--muted));
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--primary));
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--secondary));
+  }
+}
